@@ -41,7 +41,7 @@ func (x *Module) ModuleKind() ModuleKind {
 	case *Module_KindBlockIndex_:
 		return ModuleKindBlockIndex
 	}
-	panic("unsupported kind")
+	panic(fmt.Sprintf("unsupported kind: %T", x.Kind))
 }
 
 func (x *Module_Input) Pretty() string {
